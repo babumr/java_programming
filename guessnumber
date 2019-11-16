@@ -1,0 +1,71 @@
+import java.util.Scanner
+class Guesser
+{
+	int gnum;
+	int guessNum()
+	{
+		Scanner sc= new Scanner(System.in)
+		System.out.println("Guesser, guess a number");
+        gnum = sc.nextInt();
+		return gnum;
+	}
+}
+class Player
+{
+	int pnum;
+	int guessNum()
+	{
+		Scanner sc= new Scanner(System.in)
+		System.out.println("player,please guess a number");
+		pnum = sc.nextInt();
+		return pnum;
+	}
+}
+class Umpire
+{
+	int numfromgusser;
+	int numfromplayer1;
+	int numfromplayer2;
+	int numfromplayer3;
+	void collectNumFromGuesser()
+	{
+		Gusser g = new Guesser();
+		numfromgusser = g.guessNum();
+	}
+    void collectNumFromPlayer()
+	{
+		Player p = newPlayer();
+		numfromplayer1 = p.guessNum();
+		numfromplayer2 = p.guessNum();
+		numfromplayer3 = p.guessNum();
+    }
+	void compare()
+	{
+		if(numfromguesser == numfromplayer1)
+		{
+		System.out.println("player 1 wins!!");
+		}
+		else if(numfromguesser == numfromplayer2)
+		{
+		System.out.println("player 2 wins!!");
+		}
+		else if(numfromguesser == numfromplayer3)
+		{
+		System.out.println("player 3 wins!!");
+		}
+		else
+		{
+		System.out.println("GAME OVER!!");
+		}
+	}
+}
+class Main 
+{
+	public static void main(String[] arg) 
+	{
+		Umpire u = new Umpire();
+		u.collectNumFromGusser();
+		u.collectNumFromPlayer();
+        u.comparer();
+	}
+}
